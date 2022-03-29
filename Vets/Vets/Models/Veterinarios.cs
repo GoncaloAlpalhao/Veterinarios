@@ -1,17 +1,20 @@
-﻿public class Veterinarios
+﻿namespace Vets.Models
 {
-    public Veterinarios()
+    public class Veterinarios
     {
-        ListaConsultas = new HashSet<Consultas>();
+        public Veterinarios()
+        {
+            ListaConsultas = new HashSet<Consultas>();
+        }
+
+        public int Id { get; set; }
+
+        public string Nome { get; set; }
+
+        public string NumCedulaProf { get; set; }
+
+        public int Fotografia { get; set; }
+
+        public ICollection<Consultas> ListaConsultas { get; set; }
     }
-
-    public int Id { get; set; }
-
-    public string Nome { get; set; }
-
-    public string NumCedulaProf { get; set; }
-
-    public int Fotografia { get; set; }
-
-    public ICollection<Consultas> ListaConsultas { get; set; }
 }

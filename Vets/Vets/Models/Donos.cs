@@ -1,17 +1,20 @@
-﻿public class Donos
+﻿namespace Vets.Models
 {
-    public Donos()
+    public class Donos
     {
-        ListaAnimais = new HashSet<Animais>();
+        public Donos()
+        {
+            ListaAnimais = new HashSet<Animais>();
+        }
+
+        public int Id { get; set; }
+
+        public string Nome { get; set; }
+
+        public string NIF { get; set; }
+
+        public string Sexo { get; set; }
+
+        public ICollection<Animais> ListaAnimais { get; set; }
     }
-
-    public int Id { get; set; }
-
-    public string Nome { get; set; }
-
-    public string NIF { get; set; }
-
-    public string Sexo { get; set; }
-
-    public ICollection<Animais> ListaAnimais { get; set; }
 }
